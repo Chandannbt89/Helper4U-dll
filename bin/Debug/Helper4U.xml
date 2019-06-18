@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Helper4U</name>
+    </assembly>
+    <members>
+        <member name="T:Helper4U.SqlHelper4U">
+             <summary>
+            SqlHelper4U helps to minimize the your code
+             </summary> 
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.getConectionString">
+             <summary>
+            getConectionString() funcation helps to connect cons name connection from web.config
+             </summary> 
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.AmountInWords(System.Int64)">
+            <summary>
+            Convert Amount in Words [e.g.  AmountInWords(100)]
+            </summary> 
+            <param name="Amount">enter amount.</param>
+            <returns>return amount in word </returns>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.AmountInWords(System.Nullable{System.Double},System.Boolean)">
+            <summary>
+            Convert Amount in Words [e.g.  AmountInWords(100.50)]
+            </summary> 
+            <param name="numbers">enter amount in decimal.</param>
+            <param name="paisaconversion">true for append currency such as Rupees,Paise</param>
+            <returns>return amount in word with paisa </returns>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.MonthName(System.Int32,System.String)">
+             <summary>
+            Get Month Name in English [e.g. MonthNameEng(2,""); output-February]
+            Get Month Name in Hindi [e.g. MonthNameEng(1,"HN"); output-जनवरी]
+             </summary> 
+             <param name="month_number">enter month number (1 to 12).</param>
+             <param name="lang">enter "hn" for Hindi or Default in English</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.DayName(System.Int32,System.String)">
+             <summary>
+            Get Day Name in English [e.g. DayName(2,""); output-Sunday]
+            Get Day Name in Hindi [e.g. DayName(1,"HN"); output-रविवार]
+             </summary> 
+             <param name="day_number">enter month number (1 to 7).</param>
+             <param name="lang">enter "hn" for Hindi or Default in English</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.GetIP4Address">
+            <summary>
+            Get Current System IPv4 Address [e.g.  GetIP4Address()]
+            </summary> 
+            <returns>return System IPv4 Address </returns>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.GetMACAddress">
+            <summary>
+            Get Current System MAC Address [e.g.  GetMACAddress()]
+            </summary> 
+            <returns>return System MAC Address </returns>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.GenerateRandomNum(System.Int32,System.Int32)">
+            <summary>
+            Convert Amount in Words [e.g.  AmountInWords(100)]
+            </summary> 
+            <param name="types">1 for AlphaNumeric and Default is Numeric  </param>
+            <param name="length"> lengths </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.Encrypt(System.String,System.String)">
+            <summary>
+             <para>Encrypt Function For Encrypt Any String Value With User Define Key  </para>
+             <param name="strText">enter value to Encrypt.</param>
+             <param name="key">enter Encryption Key.</param>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.Encrypt(System.String)">
+            <summary>
+             <para>Encrypt Function For Encrypt Any String Value  </para>
+             <param name="strText">enter value to Encrypt.</param>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.Decrypt(System.String,System.String)">
+            <summary>
+             <para>Decrypt Function For Encrypt Any String Value With User Define Key  </para>
+             <param name="strText">enter value to Encrypt.</param>
+             <param name="sDecrKey">enter Decryption Key.</param>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.Decrypt(System.String)">
+            <summary>
+             <para>Decrypt Function For Encrypt Any String Value  </para>
+             <param name="strText">enter value to Encrypt.</param>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.ExportToWord(System.Data.DataTable,System.String)">
+            <summary>
+             <para>Export Sql Data in Word Format</para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.ExportToExcel(System.Data.DataTable,System.String)">
+            <summary>
+             <para>Export Sql Data in Excel Format</para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.ExportToPDF(System.Data.DataTable,System.String)">
+            <summary>
+             <para>Export Sql Data in PDF Format</para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.ExportToCSV(System.Data.DataTable,System.String)">
+            <summary>
+             <para>Export Sql Data in CSV Format</para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.ExportToExcel(System.String,System.Data.DataTable,System.String,System.Int32,System.String)">
+            <summary>
+            Export Sql Data in Excel Format (Using Excel Template )
+            </summary> 
+            <param name="path">pre formated excel path with file name</param>
+            <param name="dt">SQl Data table</param>
+            <param name="fileName">Enter output file name without extension</param>
+            <param name="headerNo">Enter Header Number start data printing  </param>
+            <param name="sheetName">Enter excel template Sheet Name [e.g Sheet1]</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.CreateDirectory(System.String)">
+            <summary>
+             <para>Create Empty Directory or Folder to user define location.</para>
+             <param name="path">enter path.</param>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.TakeNthFirstPosition(System.String,System.Int32)">
+            <summary>
+             <para>Take First N'th Character From String Type Value.</para>
+             <param name="s">enter string.</param>
+             <param name="len">enter lenght you want.</param>
+             <para>e.g.  input - ("Chandan",2)   output - ch</para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindPrinter(System.Web.UI.WebControls.DropDownList)">
+            <summary>
+            Bind Printer Installed in your Server
+            </summary> 
+            <param name="DropDownListName">yor drop down list</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.FillDataTable(System.String)">
+            <summary>
+            FillDataTable
+            </summary> 
+            <param name="sqlQuery">Pass SqlQuery </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.FillDataTable(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            FillDataTable
+            </summary> 
+            <param name="sqlQuery">Pass SqlQuery </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.FillDataTable(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            FillDataTable  
+            </summary> 
+            <param name="com">Pass SqlCommand </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.FillDataTable(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            FillDataTable
+            </summary> 
+            <param name="com">Pass SqlCommand </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.FillDataSet(System.String)">
+            <summary>
+            FillDataTable
+            </summary> 
+            <param name="sqlQuery">Pass SqlQuery </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.FillDataSet(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            FillDataSet
+            </summary> 
+            <param name="sqlQuery">Pass SqlQuery </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.FillDataSet(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            FillDataSet
+            </summary> 
+            <param name="com">Pass SqlCommand </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.FillDataSet(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            FillDataSet
+            </summary> 
+            <param name="com">Pass SqlCommand </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindDropDown(System.Web.UI.WebControls.DropDownList,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Bind Drop Down List 
+            </summary> 
+            <param name="DropDownName">DropDownName name</param>
+            <param name="sqlQuery">SQL Query </param>
+            <param name="val">DropDownList Item Values</param>
+            <param name="text">DropDownList Display Test</param>
+            <param name="header">Header Text [if No Header use ""]</param>
+            <param name="IsHeaderDisable">1 for disable header</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindDropDown(System.Web.UI.WebControls.DropDownList,System.String,System.String,System.String,System.Data.SqlClient.SqlConnection,System.String,System.Int32)">
+            <summary>
+            Bind Drop Down List 
+            </summary> 
+            <param name="DropDownName">DropDownName name</param>
+            <param name="sqlQuery">SQL Query </param>
+            <param name="val">DropDownList Item Values</param>
+            <param name="text">DropDownList Display Test</param>
+            <param name="con">SQL Connection</param>
+            <param name="header">Header Text [if No Header use ""]</param>
+            <param name="IsHeaderDisable">1 for disable header</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindDropDown(System.Web.UI.WebControls.DropDownList,System.Data.DataTable,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Bind Drop Down List 
+            </summary> 
+            <param name="DropDownName">DropDownName name</param>
+            <param name="dt">Datat Table </param>
+            <param name="val">DropDownList Item Values</param>
+            <param name="text">DropDownList Display Test</param>
+            <param name="header">Header Text [if No Header use ""]</param>
+            <param name="IsHeaderDisable">1 for disable header</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindDropDown(System.Web.UI.WebControls.DropDownList,System.Data.DataTable,System.String,System.String,System.Data.SqlClient.SqlConnection,System.String,System.Int32)">
+            <summary>
+            Bind Drop Down List 
+            </summary> 
+            <param name="DropDownName">DropDownName name</param>
+            <param name="dt">Datat Table </param>
+            <param name="val">DropDownList Item Values</param>
+            <param name="text">DropDownList Display Test</param>
+            <param name="con">SQL Connection</param>
+             <param name="header">Header Text [if No Header use ""]</param>
+            <param name="IsHeaderDisable">1 for disable header</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindListBox(System.Web.UI.WebControls.ListBox,System.String,System.String,System.String)">
+            <summary>
+              Bind ListBox
+            </summary> 
+            <param name="ListBoxName">ListBox name</param>
+            <param name="sqlQuery">SQL Query </param>
+            <param name="val">DropDownList Item Values</param>
+            <param name="text">DropDownList Display Test</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindListBox(System.Web.UI.WebControls.ListBox,System.String,System.String,System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Bind ListBox
+            </summary> 
+            <param name="ListBoxName">ListBox name</param>
+            <param name="sqlQuery">SQL Query </param>
+            <param name="val">DropDownList Item Values</param>
+            <param name="text">DropDownList Display Test</param>
+            <param name="con">SQL Connection</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindListBox(System.Web.UI.WebControls.DropDownList,System.Data.DataTable,System.String,System.String)">
+            <summary>
+            Bind ListBox
+            </summary> 
+            <param name="ListBoxName">ListBoxName name</param>
+            <param name="dt">Datat Table </param>
+            <param name="val">DropDownList Item Values</param>
+            <param name="text">DropDownList Display Test</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindListBox(System.Web.UI.WebControls.DropDownList,System.Data.DataTable,System.String,System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Bind ListBox
+            </summary> 
+            <param name="ListBoxName">ListBoxName name</param>
+            <param name="dt">Datat Table </param>
+            <param name="val">DropDownList Item Values</param>
+            <param name="text">DropDownList Display Test</param>
+            <param name="con">SQL Connection</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindGridView(System.Web.UI.WebControls.GridView,System.String)">
+            <summary>
+            BindGridView
+            </summary>  
+            <param name="gv">GridView Name </param>
+            <param name="sqlQuery">Pass SqlQuery </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindGridView(System.Web.UI.WebControls.GridView,System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            BindGridView
+            </summary> 
+            <param name="gv">GridView Name </param>
+            <param name="sqlQuery">Pass SqlQuery </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindGridView(System.Web.UI.WebControls.GridView,System.Data.DataTable)">
+            <summary>
+            BindGridView
+            </summary>  
+            <param name="gv">GridView Name </param>
+            <param name="dt">Pass DataTable </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindGridView(System.Web.UI.WebControls.GridView,System.Data.DataTable,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            BindGridView
+            </summary> 
+            <param name="gv">GridView Name </param>
+            <param name="dt">Pass DataTable </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindGridView(System.Web.UI.WebControls.GridView,System.Data.DataSet)">
+            <summary>
+            BindGridView
+            </summary>  
+            <param name="gv">GridView Name </param>
+            <param name="ds">Pass DataSet </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindGridView(System.Web.UI.WebControls.GridView,System.Data.DataSet,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            BindGridView
+            </summary> 
+            <param name="gv">GridView Name </param>
+            <param name="ds">Pass DataSet </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindRadioButtonList(System.Web.UI.WebControls.RadioButtonList,System.String,System.String,System.String)">
+            <summary>
+            BindRadioButtonList
+            </summary>  
+            <param name="rdo">RadioButtonList Name </param>
+            <param name="sqlQuery">Pass SqlQuery </param>
+            <param name="TextField">Display Text Field </param>
+            <param name="ValueField">Value Field </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindRadioButtonList(System.Web.UI.WebControls.RadioButtonList,System.String,System.String,System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            BindRadioButtonList
+            </summary> 
+            <param name="rdo">RadioButtonList Name </param>
+            <param name="sqlQuery">Pass SqlQuery </param>
+            <param name="TextField">Display Text Field </param>
+            <param name="ValueField">Value Field </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindRadioButtonList(System.Web.UI.WebControls.RadioButtonList,System.Data.DataTable,System.String,System.String)">
+            <summary>
+            BindRadioButtonList
+            </summary>  
+            <param name="rdo">RadioButtonList Name </param>
+            <param name="TextField">Display Text Field </param>
+            <param name="ValueField">Value Field </param>
+            <param name="dt">Pass DataTable </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindRadioButtonList(System.Web.UI.WebControls.RadioButtonList,System.Data.DataTable,System.String,System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            BindRadioButtonList
+            </summary> 
+            <param name="rdo">RadioButtonList Name </param>
+            <param name="TextField">Display Text Field </param>
+            <param name="ValueField">Value Field </param>
+            <param name="dt">Pass DataTable </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindRadioButtonList(System.Web.UI.WebControls.RadioButtonList,System.Data.DataSet,System.String,System.String)">
+            <summary>
+            BindRadioButtonList
+            </summary>  
+            <param name="rdo">RadioButtonList Name </param>
+            <param name="TextField">Display Text Field </param>
+            <param name="ValueField">Value Field </param>
+            <param name="ds">Pass DataSet </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindRadioButtonList(System.Web.UI.WebControls.RadioButtonList,System.Data.DataSet,System.String,System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            BindRadioButtonList
+            </summary> 
+            <param name="rdo">RadioButtonList Name </param>
+            <param name="TextField">Display Text Field </param>
+            <param name="ValueField">Value Field </param>
+            <param name="ds">Pass DataSet </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindListView(System.Web.UI.WebControls.ListView,System.String)">
+            <summary>
+            BindListView
+            </summary>  
+            <param name="lv">ListView Name </param>
+            <param name="sqlQuery">Pass SqlQuery </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindListView(System.Web.UI.WebControls.ListView,System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            BindListView
+            </summary> 
+            <param name="lv">ListView Name </param>
+            <param name="sqlQuery">Pass SqlQuery </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindListView(System.Web.UI.WebControls.ListView,System.Data.DataTable)">
+            <summary>
+            BindListView
+            </summary>  
+            <param name="lv">ListView Name </param>
+            <param name="dt">Pass DataTable </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindListView(System.Web.UI.WebControls.ListView,System.Data.DataTable,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            BindGridView
+            </summary> 
+            <param name="gv">GridView Name </param>
+            <param name="dt">Pass DataTable </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindListView(System.Web.UI.WebControls.ListView,System.Data.DataSet)">
+            <summary>
+            BindListView
+            </summary>  
+            <param name="lv">ListView Name </param>
+            <param name="ds">Pass DataSet </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.BindListView(System.Web.UI.WebControls.ListView,System.Data.DataSet,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            BindListView
+            </summary> 
+            <param name="lv">ListView Name </param>
+            <param name="ds">Pass DataSet </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.ValidateMobile(System.String)">
+            <summary>
+            Validate 10-Digit Mobile Number [if return 1 that is valid]
+            </summary> 
+            <param name="number">enter 10-digit mobile number.</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.ValidateEmail(System.String)">
+            <summary>
+            Validate Email Address  [if return 1 that is valid]
+            </summary> 
+            <param name="email">enter email id.</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.IsDateFormat(System.String)">
+            <summary>
+            Validate Date Format  [if return 1 that is valid]
+            </summary> 
+            <param name="inputDate">enter date</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.IsNumeric(System.String)">
+            <summary>
+            Validate Numeric Format  [if return 1 that is valid]
+            </summary> 
+            <param name="inputNumber">enter number</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.IsUserExists(System.String)">
+            <summary>
+            IsUserExists for Check it exist or not in database [return 1 for Exist]
+            </summary> 
+            <param name="sqlQuery">Pass SqlQuery </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.IsUserExists(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            IsUserExists for Check it exist or not in database  [return 1 for Exist]
+            </summary> 
+            <param name="sqlQuery">Pass SqlQuery </param>
+            <param name="con">Pass SqlConnection </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.Scalar(System.String)">
+            <summary>
+            get execute scalar value
+            </summary> 
+            <param name="str">SQl Query</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.Scalar(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            get execute scalar value
+            </summary> 
+            <param name="str">SQl Query</param>
+            <param name="con">SQl Connection</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.IUD(System.String,System.String@)">
+            <summary>
+            IUD (Insert,Update and Delete) data in sql server database using SqlCommand
+            </summary> 
+            <param name="SqlQuery">Pass Sql Query </param>
+            <param name="Msg">Pass SqlCommand </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.IUD(System.Data.SqlClient.SqlCommand,System.String@)">
+            <summary>
+            IUD (Insert,Update and Delete)  data in sql server database using SqlCommand
+            </summary> 
+            <param name="com">Pass SqlCommand </param>
+            <param name="Msg">Pass SqlCommand </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.IUD(System.String,System.Data.SqlClient.SqlConnection,System.String@)">
+            <summary>
+            IUD (Insert,Update and Delete) data in sql server database using SqlCommand
+            </summary> 
+            <param name="SqlQuery">Pass Sql Query </param>
+            <param name="con">SQL Connection </param>
+            <param name="Msg">return error msg </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.IUD(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlConnection,System.String@)">
+            <summary>
+            IUD (Insert,Update and Delete)  data in sql server database using SqlCommand
+            </summary> 
+            <param name="com">Pass SqlCommand </param>
+            <param name="con">Pass SqlConnection </param>
+            <param name="Msg">Pass SqlCommand </param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.ShowMessageBox(System.Web.UI.Page,System.String)">
+            <summary>
+             <para>ShowMessageBox(this,"Hello Chandan") </para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.ShowMessageBox(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+             <para>Show User Define Message and then redirect user define page.</para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.SearchValue(System.String,System.String)">
+            <summary>
+            Search a particular word or string on specific database feild after where 
+            </summary> 
+            <param name="fieldName">Database Field Name</param>
+            <param name="searchingWord">Searching string seperated by comma or space</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.getIndianDateTime">
+             <summary>
+            getIndianDateTime() funcation return Indian date Time
+             </summary> 
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.GenerateHTMLTable(System.Data.DataTable)">
+            <summary>
+            GenerateHTMLTable
+            </summary> 
+            <param name="dt">DataTable</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.GenerateHTMLTable(System.String)">
+            <summary>
+            GenerateHTMLTable
+            </summary> 
+            <param name="sqlQuery">SQL Query</param>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.CheckFileType(System.String)">
+            <summary>
+             <para>Check file extension (.pdf,.jpeg,.jpg,.png)</para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.SendMail(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+             <para>Send Mail Without Any Attachements</para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.SendMail(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+             <para>Send Mail With Single Attachements</para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.SendMailWithFolder(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+             <para>Send Mail With Multiple Attachements</para>
+            </summary>
+        </member>
+        <member name="M:Helper4U.SqlHelper4U.ExceptionMessage(System.Int32)">
+            <summary>
+            Exception Message
+            </summary> 
+            <param name="id">Exeption Code</param>
+        </member>
+        <member name="T:Helper4U.Age">
+            <summary>  
+            For calculating age  
+            </summary>  
+        </member>
+        <member name="F:Helper4U.Age.Years">
+            <summary>  
+            Declare Year Variable as int type
+            </summary>  
+        </member>
+        <member name="F:Helper4U.Age.Months">
+            <summary>  
+            Declare Months Variable as int type
+            </summary>  
+        </member>
+        <member name="F:Helper4U.Age.Days">
+            <summary>  
+            Declare Days Variable as int type
+            </summary>  
+        </member>
+        <member name="M:Helper4U.Age.#ctor(System.DateTime)">
+            <param name="Bday">Enter Date of Birth in Date Format to Calculate the age</param>
+            <returns> years, months,days</returns>  
+        </member>
+        <member name="M:Helper4U.Age.#ctor(System.DateTime,System.DateTime)">
+            <param name="Bday">Enter Date of Birth in Date Format to Calculate the age</param>
+            <param name="Cday">Enter Current Date in Date Format to Calculate the age</param>
+            <returns> years, months,days</returns>  
+        </member>
+        <member name="M:Helper4U.Age.Count(System.DateTime)">
+            <param name="Bday">Enter Date of Birth in Date Format to Calculate the age</param>
+        </member>
+        <member name="M:Helper4U.Age.Count(System.DateTime,System.DateTime)">
+            <param name="Bday">Enter Date of Birth in Date Format to Calculate the age</param>
+            <param name="Cday">Enter Current Date in Date Format to Calculate the age</param>
+        </member>
+    </members>
+</doc>
